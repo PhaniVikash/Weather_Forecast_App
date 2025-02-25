@@ -26,7 +26,7 @@ if place:
             image={"Clear":"image/clear.png","Clouds":"image/cloud.png","Rain":"image/rain.png","Snow":"image/snow.png"}
             sky_condition = [dict["weather"][0]["main"] for dict in filter_data]
             image_path=[image[condition] for condition in sky_condition]
-            print(sky_condition)
+
             st.image(image_path,width=115)
     except KeyError:
         st.write("Place doesn't exists")
