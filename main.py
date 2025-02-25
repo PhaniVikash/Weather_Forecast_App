@@ -23,7 +23,7 @@ if place:
             figure=px.line(x=date,y=temp,labels={"x":"Dates","y":"Temperatures (C)"})
             st.plotly_chart(figure)
         if option == "Sky view":
-            image={"Clear":"image/clear.png","Clouds":"image/cloud.png","Rain":"image/rain.png","Snow":"image/snow.png"}
+            image={"Clear":"image/clear.png","Clouds":"image/cloud.jpg","Rain":"image/rain.png","Snow":"image/snow.png"}
             sky_condition = [dict["weather"][0]["main"] for dict in filter_data]
             image_path=[image[condition] for condition in sky_condition]
 
